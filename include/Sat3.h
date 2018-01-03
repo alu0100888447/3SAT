@@ -23,6 +23,12 @@ public:
     Sat3(const Sat3 &cp);
     virtual ~Sat3();
 
+    void leer(string nombreFichero);
+    void tranformacion(vector <string> clausula);
+    string espacios(string cadena);
+    void salida(vector <bitset<1> > val, vector <bitset<1> > in, vector <bitset<1> > neg);
+    int contar(vector <bitset<1> > aux);
+
     const bitset<3> &getNeg_() const;
     void setNeg_(const bitset<3> &neg_);
     const bitset<3> &getVal_() const;
@@ -30,6 +36,5 @@ public:
     const bitset<3> &getIn_() const;
     void setIn_(const bitset<3> &in_);
 };
-
 
 #endif //PRACTICA4_SAT3_H
